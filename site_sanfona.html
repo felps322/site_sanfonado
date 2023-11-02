@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>Rabbit Technology</title>
+
+        <meta charset="UTF-8"/>
+
+    </head>
+
+    <style>
+
+        body{
+
+            margin-left: 50px;
+
+            margin-right: 50px;
+
+            background-color: #aab0ff;
+
+        }
+
+        .titulo{
+
+            background-color: #5460a7;
+
+            color: white;
+        }
+
+        .container {
+
+            height: 100%;
+
+            background-color: #949ce9;
+
+            text-align: center;
+
+        }
+
+        .bloco{
+            position: relative;
+            margin: auto;
+            width: 160px;
+            padding: 10px;
+            overflow: hidden;
+            background-color: #949ce9;
+        }
+
+        .botao{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #5460a7;
+        }
+
+        .botao:hover{
+            transform: scale(.95);
+        }
+
+        accordion {
+
+            margin: 0 auto;
+
+            max-width: 30em;
+
+        }
+
+        .toggle {
+
+            display: none;
+
+        }
+
+        .option {
+
+            position: relative;
+
+            margin-bottom: 20px;
+
+            margin-left: 50px;
+
+            margin-right: 50px;
+
+        }
+
+        .title,
+
+        .content {
+
+            -webkit-backface-visibility: hidden;
+
+            backface-visibility: hidden;
+
+            -webkit-transform: translateZ(0);
+
+            transform: translateZ(0);
+
+            transition: all 0.2s;
+
+        }
+
+        /*Titulo do acordeon*/
+        .title {
+
+            background: #5460a7;
+
+            color: white;
+            
+            font-size: 29px;
+
+            padding: 1em;
+
+            display: block;
+
+            font-weight: bold;
+
+            border-radius: 10px;
+
+            box-shadow: 3px 3px 6px #6974bd, -3px 3px 6px #6974bd;
+
+        }
+
+        /*setinha*/
+        .title:after, .title:before {
+
+            content: '';
+
+            position: absolute;
+
+            right: 1.25em;
+
+            top: 1.25em;
+
+            width: 2px;
+
+            height: 0.75em;
+
+            background-color: white;
+
+            transition: all 0.2s;
+
+        }
+
+        /*conteúdo do acordeon*/
+        .content {
+
+            max-height: 0;
+
+            overflow: hidden;
+
+            background-color: #949ce9;
+
+            font-size: 27px;
+
+            width: 95%;
+
+            margin-left: 2.5%;
+
+            border-radius: 2px 2px 10px 10px;
+
+        }
+
+        /*sombras após a ativação do acordeon*/
+        .toggle:checked + .title, .toggle:checked + .title + .content {
+
+            box-shadow: 3px 3px 6px #5460a7, -3px 3px 6px #5460a7;
+
+        }
+
+        .toggle:checked + .title + .content {
+
+            max-height: 10%;
+
+        }
+
+        /*barra da esquerda que forma a seta*/
+        .title:before {
+
+            -webkit-transform: rotate(30deg);
+
+            transform: rotate(30deg);
+
+        }
+
+        /*barra da direita que forma a seta*/
+        .title:after {
+
+            transform: rotate(150deg);
+
+            right: 26px;
+
+        }
+
+        /*barra da direita após a ativação*/
+        .toggle:checked + .title:after {
+
+            -webkit-transform: rotate(210deg);
+
+            transform: rotate(210deg);
+
+        }
+
+        /*barra da esquerda após a ativaçâo*/
+        .toggle:checked + .title:before {
+
+            -webkit-transform: rotate(-30deg);
+
+            transform: rotate(-30deg);
+
+        }
+
+    </style>
+
+    <body>
+
+        <div class="container">
+
+            <div class="titulo">
+
+                <br>
+                <font style="font-size: 65px; font-weight: bold;">Rabbit Technology</font>
+                <br>
+                <br>
+                <font style="font-size: 32px;">Software Development</font>
+
+            </div>
+
+            <br>
+
+            <div class="bloco">
+                <a href="#"><div class="botao" style="float: left;"><img src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-instagram-social-platform-icon-png-image_6315976.png" width="73%" style="margin-top: 8px; margin-left: 1px;"></div></a>
+                <a href="#"><div class="botao" style="margin-left: 100px;"><img src="https://i0.wp.com/miriamantunes.com.br/wp-content/uploads/2020/09/logo-whatsapp-png-transparente17.png?fit=1024%2C727&ssl=1" width="100%" style="margin-top: 7px; margin-left: 1px;"></div></a>
+            </div>
+
+            <br>
+
+            <div class="accordion">
+
+                <div class="option"><input class="toggle" id="toggle1" type="checkbox" /><label class="title" for="toggle1">Projects</label>
+
+                    <div class="content">
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="accordion">
+
+                <div class="option"><input class="toggle" id="toggle2" type="checkbox" /> &nbsp; &nbsp; <label class="title" for="toggle2">About Us</label>
+
+                    <div class="content">
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <br>
+
+        </div>
+
+        <center><em><font style="color: white; font-size: 25px;">"Our Best For Your Business"</font></em></center>
+
+    </body>
+
+</html>
